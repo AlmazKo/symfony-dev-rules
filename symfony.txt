@@ -154,16 +154,18 @@
 
  7. БД/schema.yml
  ----------------
-    7.1 Таблицам даем название во множественном числе:
+    7.1 Таблицам даем название с префиксом "app_" во множественном числе:
         Например:
             Tag:
-              tableName: tags
+              tableName: app_tags
 
             Article:
-              tableName: articles
+              tableName: app_articles
 
             ArticleTag:
-              tableName: article_tags
+              tableName: app_article_tags
+
+        Префикс используем, чтобы отделять свои таблицы от "чужих" (плагины и пр).
 
     7.2 Именования колонок:
         - первичный ключ: "id"
